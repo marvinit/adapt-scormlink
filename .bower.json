@@ -1,7 +1,7 @@
 {
   "name": "adapt-scormlink",
   "version": "0.0.1",
-  "framework": ">=2",
+  "framework": ">=2.0.0",
   "homepage": "http://xtractor.se",
   "issues": "",
   "displayName": "Text",
