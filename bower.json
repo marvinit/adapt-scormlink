@@ -2,6 +2,7 @@
   "name": "adapt-scormlink",
   "version": "0.0.1",
   "framework": ">=2",
+  "repository": "git://github.com/marvinit/adapt-scormlink.git",
   "homepage": "https://github.com/marvinit/adapt-scormlink",
   "issues": "https://github.com/marvinit/adapt-scormlink.git",
   "displayName": "Scormlink",
