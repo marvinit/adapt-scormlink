@@ -1,0 +1,20 @@
+{
+  "_id": "c-05",
+  "_parentId": "b-05",
+  "_type": "component",
+  "_component": "scormlink",
+  "_classes": "",
+  "_layout": "left",
+  "title": "Any title",
+  "displayTitle": "Any displaytitle",
+  "body": "Leave empty for expected behavoiur",
+  "scormLinkBodyProtocol": "http or https or any",
+  "scormLinkBodyURL": "Leading path like learning.nu/path",
+  "scormLinkBodyNoScormURL": "Alternate path when no Scorm is present like learning.nu/path_without_querystring",
+  "scormLinkBodyStudentName": "First parameter like ?userName=",
+  "scormLinkBodyStudentId": "Secont parameter like &userId=",
+  "scormLinkBodyText": "Link text goes here",
+  "scormLinkBodyTarget": "window target like _blank _top _namedwindow",
+  "scormLinkBody": "do not use, leave blank n/a",
+  "instruction": "Leave empty for expected behavoiur"
+}

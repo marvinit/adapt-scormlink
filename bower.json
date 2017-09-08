@@ -1,0 +1,16 @@
+{
+  "name": "adapt-scormlink",
+  "version": "0.0.1",
+  "framework": ">=2",
+  "homepage": "https://github.com/marvinit/adapt-scormlink",
+  "issues": "https://github.com/marvinit/adapt-scormlink.git",
+  "displayName": "Scormlink",
+  "component": "scormlink",
+  "description": "A User-Scorm-value-link-builder for redirects to external URL with studentName and StudentId from Scorm",
+  "main": "/js/adapt-scormlink.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-component"
+  ],
+  "license": "GPLv3"
+}
