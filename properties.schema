@@ -29,6 +29,73 @@
       "validators": [],
       "help": "This is the instruction text",
       "translatable": true
+    },
+    "_scormlink": {
+      "type": "object",
+      "required": false,
+      "title": "Scorm Link",
+      "properties": {
+        "bodyProtocol" : {
+          "type": "string",
+          "required": true,
+          "enum": ["http", "https"],
+          "default": "https",
+          "inputType": {
+            "type": "Select",
+            "options": ["http", "https"]
+          },
+          "validators": [],
+          "help": "Select protocol for link"
+        },
+        "bodyURL": {
+          "type": "string",
+          "required": true,
+          "default": "",
+          "inputType": "Text",
+          "validators": [],
+          "help": "Enter url for use with Scorm parameters"
+        },
+        "bodyNoScormURL": {
+          "type": "string",
+          "required": true,
+          "default": "",
+          "inputType": "Text",
+          "validators": [],
+          "help": "Enter url for use when Scorm parameters are unavailable"
+        },
+        "bodyStudentName": {
+          "type": "string",
+          "required": true,
+          "default": "?userName=",
+          "inputType": "Text",
+          "validators": [],
+          "help": "Parameter name for use with Scorm StudentName"
+        },
+        "bodyStudentId": {
+          "type": "string",
+          "required": true,
+          "default": "&userId=",
+          "inputType": "Text",
+          "validators": [],
+          "help": "Parameter name for use with Scorm StudentId"
+        },
+        "bodyText": {
+          "type": "string",
+          "required": true,
+          "default": "",
+          "inputType": "Text",
+          "validators": [],
+          "help": "Enter link text"
+        },
+        "bodyTarget": {
+          "type": "string",
+          "required": true,
+          "default": "_self",
+          "inputType": "Text",
+          "validators": [],
+          "help": "Select a valid target (_self, _blank, _parent, _top, *_namedwindow*)"
+        }
+      }
     }
   }
 }
