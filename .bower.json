@@ -1,7 +1,7 @@
 {
   "name": "adapt-scormlink",
-  "version": "0.0.1",
-  "framework": ">=2.0.0",
+  "version": "0.1.0",
+  "framework": ">=5.0.0",
   "homepage": "http://xtractor.se",
   "issues": "",
   "displayName": "Text",
@@ -13,14 +13,14 @@
     "adapt-component"
   ],
   "license": "GPLv3",
-  "_release": "0.0.1",
+  "_release": "0.1.0",
   "_resolution": {
     "type": "version",
-    "tag": "v0.0.1",
+    "tag": "v0.1.0",
     "commit": "dd2830cf3d9033d4d7f7e21f536e533c2b8cb97c"
   },
   "_source": "",
-  "_target": "^2.0.2",
+  "_target": "^5.0.0",
   "_originalSource": "adapt-scormlink",
   "_direct": true
 }
