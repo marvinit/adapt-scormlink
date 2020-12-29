@@ -10,29 +10,21 @@ define(function(require) {
             var spoorConfig = Adapt.config.get('_spoor');
             if (spoorConfig && spoorConfig._isEnabled) {
 
-                var scormLinkBodyProtocol = this.model.get('scormLinkBodyProtocol');
-                var scormLinkBodyURL = this.model.get('scormLinkBodyURL');
-                var scormLinkBodyNoScormURL = this.model.get('scormLinkBodyNoScormURL');
-                var scormLinkBodyStudentName = this.model.get('scormLinkBodyStudentName');
-                var scormLinkBodyStudentId = this.model.get('scormLinkBodyStudentId');
-                var scormLinkBodyText = this.model.get('scormLinkBodyText');
-                var scormLinkBodyTarget = this.model.get('scormLinkBodyTarget');
+                var scormLink = this.model.get('_scormlink');
                 var fullLink;
+                var emptyLink;
 
                 try {
-                    var scormAPI = require('extensions/adapt-contrib-spoor/js/scorm');
                     // add userid and username to string
-                    fullLink = "<a target='" + scormLinkBodyTarget + "' " + "href='" + scormLinkBodyProtocol + "://" + scormLinkBodyURL + scormLinkBodyStudentName + scormAPI.getStudentName() + scormLinkBodyStudentId + scormAPI.getStudentId() + "'>" + scormLinkBodyText + "</a>";
-
+                    fullLink = "<a target='" + scormLink.bodyTarget + "' " + "href='" + scormLink.bodyProtocol + "://" + scormLink.bodyURL + scormLink.bodyStudentName + encodeURIComponent(API.LMSGetValue('cmi.core.student_name')) + scormLink.bodyStudentId + encodeURIComponent(API.LMSGetValue('cmi.core.student_id')) + "'>" + scormLink.bodyText + "</a>";
 
                 } catch (e) {
                     console.log('Something went wrong', e);
                     // Scorm not present, anonymous link
                     this.model.set('scormlinkbody', emptyLink);
-                    fullLink = "<a target='" + scormLinkBodyTarget + "' " + "href='" + scormLinkBodyProtocol + "://" + scormLinkBodyNoScormURL + "'>" + scormLinkBodyText + "</a>";
+                    fullLink = "<a target='" + scormLink.bodyTarget + "' " + "href='" + scormLink.bodyProtocol + "://" + scormLink.bodyNoScormURL + "'>" + scormLink.bodyText + "</a>";
 
                 }
-                //console.log(scormAPI.getStudentName());
             }
             this.model.set('scormLinkBody', fullLink);
 
